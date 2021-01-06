@@ -25,7 +25,7 @@ is hoped to provide four important benefits:
 ## Caveats
 
 In its first beta release, Ceres software and hardware requirements are fairly restrictive (Windows operating system,
-processors with AVX2, and NVIDIA GPUs). Currently the installation and configuration burden
+processors with AVX, and NVIDIA GPUs). Currently the installation and configuration burden
 is fairly significant and only suggested for hardcore enthusiasts with substantial computer expertise.
 
 Initial testing suggests Ceres play quality is already highly competitive with 
@@ -81,7 +81,7 @@ by LC0 contributor Naphthalin).
 * MCTS leaf selection is highly parallelized in an almost lock-free way, 
 with only a single descent and each visited node being visited at most once.
 
-* MCTS leaf selection via PUCT algorithm is accelerated via SIMD hardware intrinsics (AVX2),
+* MCTS leaf selection via PUCT algorithm is accelerated via SIMD hardware intrinsics (AVX),
 which is made feasible by the above-mentioned parallelized descent algorithm.
 
 * An overlapping execution approach allows efficient concurrent gathering and evaluation of batches.
@@ -223,7 +223,7 @@ and software developers, most notably:
 
 Ceres is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
+the Free Software Foundation, either version 3 or later of the License, or
 (at your option) any later version.
 
 Ceres is distributed in the hope that it will be useful,
@@ -233,3 +233,17 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with Leela Chess.  If not, see <http://www.gnu.org/licenses/>.
+
+
+### Additional permission under GNU GPL version 3 section 7
+
+_The source files of Ceres have the following additional permission, 
+as allowed under GNU GPL version 3 section 7:_
+
+If you modify this Program, or any covered work, by linking or
+combining it with NVIDIA Corporation's libraries from the NVIDIA CUDA
+Toolkit and the NVIDIA CUDA Deep Neural Network library (or a
+modified version of those libraries), containing parts covered by the
+terms of the respective license agreement, the licensors of this
+Program grant you additional permission to convey the resulting work.
+
